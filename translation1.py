@@ -90,7 +90,7 @@ def translate_from_file():
             
             # Check if file exists
             if not os.path.isfile(file_path):
-                print(f"Error: File '{file_path}' not found. Please check the path and try again.")
+                print(f"Error: File '{file_path}' not founds. Please check the path and try again.")
                 continue
             
             # Read the file content

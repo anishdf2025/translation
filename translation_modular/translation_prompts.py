@@ -10,17 +10,17 @@ class TranslationPrompts:
         self.ollama_client = Client()
         self.options = {
             "num_gpu": 0, 
-            "num_ctx": 2048, 
-            "num_predict": 2500, 
+            "num_ctx": 16000,
+            "num_predict": 2048, 
             "temperature": 0.1,
-            "repeat_penalty": 1.2
+            "repeat_penalty": 1.3
         }
     
     def create_translation_prompt(self, text, source_lang):
         """Create appropriate translation prompt based on source language"""
         if source_lang == 'hi':
             # Hindi to English
-            prompt = f"""Translate the following Hindi text to English. Provide only the English translation without any explanations or additional text:
+            prompt = f"""You are a translation assistant. Translate only the following Hindi text to English without explanation, rephrasing, or any added formatting. Output only the translated English text:
 
 Hindi Text: {text}
 
@@ -28,7 +28,7 @@ English Translation:"""
             target_lang = "English"
         else:
             # Default to English to Hindi
-            prompt = f"""Translate the following English text to Hindi. Provide only the Hindi translation without any explanations or additional text:
+            prompt = f"""You are a translation assistant. Translate only the following English text to Hindi without explanation, rephrasing, or any added formatting. Output only the translated Hindi text:
 
 English Text: {text}
 
@@ -45,13 +45,12 @@ Hindi Translation:"""
             # Ensure text is properly encoded
             if isinstance(text, bytes):
                 text = text.decode('utf-8', errors='replace')
-            
             # Create prompt
             prompt, target_lang = self.create_translation_prompt(text, source_lang)
             
             # Get translation from Ollama
             response = self.ollama_client.generate(
-                model="gemma3:4b",
+                model="gemma3n:e2b",
                 prompt=prompt,
                 options=self.options
             )

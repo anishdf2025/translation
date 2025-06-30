@@ -50,7 +50,7 @@ Answer:"""
                 
             # Generate the answer
             response = ollama_client.generate(
-                model="gemma3:4b",
+                model="gemma3n:e2b",
                 prompt=prompt,
                 options=options
             )

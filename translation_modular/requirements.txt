@@ -1,4 +1,3 @@
 ollama
 langdetect
 spacy
-spacy

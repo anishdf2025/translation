@@ -140,4 +140,3 @@ if __name__ == "__main__":
     
     print("Starting General Knowledge Service")
     general_knowledge_mode()
-#निम्नलिखित प्रश्न का विस्तृत उत्तर हिंदी में दें।

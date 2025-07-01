@@ -12,8 +12,8 @@ class TranslationPrompts:
             "num_gpu": 0, 
             "num_ctx": 16000,
             "num_predict": 2048, 
-            "temperature": 0.1,
-            "repeat_penalty": 1.3
+            "temperature": 0.2,
+            "repeat_penalty": 1.2
         }
     
     def create_translation_prompt(self, text, source_lang):

@@ -1,19 +1,99 @@
 import os
 import time
+from html_parser import HTMLParser
 
 
 class FileHandler:
     """Handles file operations for translation process"""
     
     def __init__(self):
-        pass
+        self.html_parser = HTMLParser()
     
-    def read_file(self, file_path):
-        """Read content from a file"""
+    def read_file(self, file_path, keep_temp_html=True):
+        """Read content from a file - automatically process HTML files"""
         try:
-            with open(file_path, 'r', encoding='utf-8') as file:
-                content = file.read()
-            return content, None
+            # Check if it's an HTML file
+            if self._is_html_file(file_path):
+                # Process HTML and return the path to the generated .md file
+                md_file_path = self._process_html_to_md_file(file_path)
+                if md_file_path:
+                    # Read the generated .md file
+                    with open(md_file_path, 'r', encoding='utf-8') as file:
+                        content = file.read()
+                    return content, None
+                else:
+                    return None, "Failed to process HTML file"
+            else:
+                # For non-HTML files, read normally
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    content = file.read()
+                return content, None
+        except Exception as e:
+            return None, str(e)
+    
+    def _is_html_file(self, file_path):
+        """Check if the file is an HTML file"""
+        file_ext = os.path.splitext(file_path)[1].lower()
+        return file_ext in ['.html', '.htm']
+    
+    def _process_html_to_md_file(self, file_path):
+        """Process HTML file and create a permanent .md file"""
+        try:
+            # Create markdown file path
+            file_name = os.path.basename(file_path)
+            file_base, _ = os.path.splitext(file_name)
+            md_file = f"{file_base}.md"
+            md_file_path = os.path.join(os.path.dirname(file_path), md_file)
+            
+            # Extract HTML content to markdown
+            success, error = self.html_parser.extract_all_visible_text(file_path, md_file_path)
+            
+            if success:
+                print(f"✅ HTML file processed: {file_path}")
+                print(f"📄 Generated markdown file: {md_file_path}")
+                print(f"📄 Using generated markdown file for translation")
+                return md_file_path
+            else:
+                print(f"❌ Error processing HTML: {error}")
+                return None
+                
+        except Exception as e:
+            print(f"❌ Error processing HTML file: {str(e)}")
+            return None
+    
+    def _process_html_file(self, file_path, keep_temp=False):
+        """Process HTML file and return extracted text content"""
+        try:
+            # Create temporary markdown file path
+            file_name = os.path.basename(file_path)
+            file_base, _ = os.path.splitext(file_name)
+            temp_md_file = f"{file_base}_extracted.md"
+            temp_md_path = os.path.join(os.path.dirname(file_path), temp_md_file)
+            
+            # Extract HTML content to markdown
+            success, error = self.html_parser.extract_all_visible_text(file_path, temp_md_path)
+            
+            if success:
+                # Read the extracted content
+                with open(temp_md_path, 'r', encoding='utf-8') as file:
+                    content = file.read()
+                
+                print(f"✅ HTML file processed: {file_path}")
+                print(f"📄 Extracted content saved to: {temp_md_path}")
+                print(f"📄 Extracted content will be used for translation")
+                
+                # Clean up temporary file unless keep_temp is True
+                if not keep_temp:
+                    try:
+                        os.remove(temp_md_path)
+                        print(f"🧹 Cleaned up temporary file: {temp_md_file}")
+                    except Exception as cleanup_error:
+                        print(f"⚠️ Warning: Could not clean up temporary file: {str(cleanup_error)}")
+                
+                return content, None
+            else:
+                return None, error
+                
         except Exception as e:
             return None, str(e)
     
@@ -26,17 +106,25 @@ class FileHandler:
         return os.path.getsize(file_path) / 1024
     
     def create_output_paths(self, file_path, target_lang):
-        """Create output file paths"""
-        file_name = os.path.basename(file_path)
-        file_base, file_ext = os.path.splitext(file_name)
+        """Create output file paths - handle HTML files by using their .md counterparts"""
+        # If it's an HTML file, use the corresponding .md file for output naming
+        if self._is_html_file(file_path):
+            file_name = os.path.basename(file_path)
+            file_base, _ = os.path.splitext(file_name)
+            # Use .md extension for HTML-derived files
+            actual_file_base = file_base
+            actual_file_ext = ".md"
+        else:
+            file_name = os.path.basename(file_path)
+            actual_file_base, actual_file_ext = os.path.splitext(file_name)
         
-        output_file = f"{file_base}_chunks_{target_lang.lower()}{file_ext}"
+        output_file = f"{actual_file_base}_chunks_{target_lang.lower()}{actual_file_ext}"
         output_path = os.path.join(os.path.dirname(file_path), output_file)
         
-        clean_output_file = f"{file_base}_clean_translation{file_ext}"
+        clean_output_file = f"{actual_file_base}_clean_translation{actual_file_ext}"
         clean_output_path = os.path.join(os.path.dirname(file_path), clean_output_file)
         
-        timing_file = f"{file_base}_chunk_translation_timing.txt"
+        timing_file = f"{actual_file_base}_chunk_translation_timing.txt"
         timing_path = os.path.join(os.path.dirname(file_path), timing_file)
         
         return output_path, clean_output_path, timing_path
@@ -60,13 +148,17 @@ class FileHandler:
             return False, str(e)
     
     def save_clean_translations(self, clean_output_path, clean_translations):
-        """Save clean translations to file"""
+        """Save clean translations to file with one line space between chunks"""
         try:
             with open(clean_output_path, 'w', encoding='utf-8') as file:
                 clean_output = ""
-                for item in clean_translations:
-                    item_str = str(item)
-                    clean_output += item_str + " "
+                for i, item in enumerate(clean_translations):
+                    item_str = str(item).strip()
+                    clean_output += item_str
+                    
+                    # Add one line space between chunks (but not after the last chunk)
+                    if i < len(clean_translations) - 1:
+                        clean_output += "\n\n"
                 
                 file.write(clean_output)
             return True, None
@@ -91,3 +183,18 @@ class FileHandler:
     def write_total_time(self, timing_f, total_time):
         """Write total time to timing file"""
         timing_f.write(f"\nTotal translation time: {total_time:.2f} seconds\n")
+    
+    def cleanup_temp_files(self, file_path):
+        """Clean up temporary files created during HTML processing"""
+        if self._is_html_file(file_path):
+            try:
+                file_name = os.path.basename(file_path)
+                file_base, _ = os.path.splitext(file_name)
+                temp_md_file = f"{file_base}_extracted.md"
+                temp_md_path = os.path.join(os.path.dirname(file_path), temp_md_file)
+                
+                if os.path.exists(temp_md_path):
+                    os.remove(temp_md_path)
+                    print(f"🧹 Cleaned up temporary file: {temp_md_file}")
+            except Exception as e:
+                print(f"⚠️ Warning: Could not clean up temporary file: {str(e)}")

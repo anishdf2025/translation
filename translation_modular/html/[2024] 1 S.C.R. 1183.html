@@ -1,0 +1,2244 @@
+<html><head></head><body><div id="judgement-view">
+
+
+   
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--<meta http-equiv="Content-Security-Policy" content="script-src 'none'">-->
+      <title>Digital Supreme Court Reports</title>
+      <link rel="icon" type="image/png" href="assets/images/favicon.png">
+      <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.new.css"> -->
+      
+      <link rel="stylesheet" href="assets/css/splitcss.css">
+      
+     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+     
+     <link rel="stylesheet" href="assets/css/search_Judgment.css">
+
+      <!-- <link rel="stylesheet" href="admin/assets/css/multiselect.css"> -->
+      <!-- <script src="assets/js/bootstrap.bundle.min.js"  ></script> -->
+
+      <!-- <script src="assets/js/ajax_libs_jquery_3.7.1_jquery.min.js"  ></script> -->
+
+
+
+      <!-- new file data  -->
+      <link rel="stylesheet" href="fontawesome/css/all.min.css">
+      <link href="css/bootstrap.min.css" rel="stylesheet">      
+      
+      <link href="css/commonstyle.css" rel="stylesheet">
+      <link href="css/custom.css" rel="stylesheet">
+      <link href="css/select2-min.css" rel="stylesheet">
+      <link href="css/select2.css" rel="stylesheet">
+      <link href="css/autocomplete.css" rel="stylesheet">
+      <link href="css/popup.css" rel="stylesheet">
+
+
+
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/responsive.css">
+   
+   
+      <header class="header">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-1 col-md-1 col-2">
+                  <div class="logo ashoka">
+
+                                   <a href="./"> <img src="assets/images/ashoka.png" alt="ashoka logo"></a>
+                  </div>
+               </div>
+               <div class="col-lg-8 col-md-8 col-8">
+                  <div class="header-content" tabindex="0">
+                     <span class="Supreme">Supreme Court of India </span>
+              
+                     <div class="Reports">
+                     <span>Digital Supreme Court Reports  </span></div>
+            
+                     <span class="Official">The Official Law Report</span>
+                     <span class="Official">Fortnightly</span>
+		     <span class="ISSN_NO">ISSN: 3048-4839 (Online)</span>
+                     
+                  </div>
+               </div>
+               <div class="col-lg-1 col-md-1 col-2">
+                  <div class="logo emblem">
+                  <a href="./">   <img src="assets/images/emblem.png" alt="emblem"></a>
+                  </div>
+               </div>
+            </div>
+        
+         </div>
+         <div class="home-position">
+         <div class="font-increase">
+         <span class="home"><a href="./"> Home</a></span>
+         <div id="chcp_font_size" class="input-group">
+       
+            <span class="input-group-btn">
+          
+            <button id="btn-decrease" class="btn btn-default" type="button" title="decrease Font Size" aria-label="decrease Font Size"><i class="fa fa-font" aria-hidden="true"></i>-</button>
+            <!-- <button id="btn-orig" class="btn btn-default" type="button"  title="Normal Font Size" aria-label="Normal Font Size"><i class="fa fa-font" aria-hidden="true"></i>A</button> -->
+            <button id="btn-increase" class="btn btn-default" type="button" title="increase Font Size" aria-label="increase Font Size"><i class="fa fa-font" aria-hidden="true"></i>+</button>
+            </span>
+         </div>
+      </div>
+      </div>
+      </header>
+      
+  
+      
+
+         <link rel="stylesheet" href="assets/css/responsive.css">
+
+         <style>
+            ._idFootnotes a {
+               color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+               text-decoration: underline;
+            }
+
+            .htmlview .Headnote p {
+               text-align: left !important;
+            }
+
+            .htmlview .Case-Cited p {
+               text-align: left !important;
+            }
+
+            .htmlview p.Apeal.ParaOverride-1 {
+               text-align: center !important;
+            }
+
+            .htmlview .Apeal-1 p {
+               text-align: left !important;
+            }
+
+            .htmlview .Apeal p {
+               text-align: left !important;
+            }
+
+            .htmlview .Advocates-Appeared p {
+               text-align: left !important;
+            }
+
+            .htmlview .Judgementp {
+               text-align: left !important;
+            }
+
+            .htmlview .Date-of-Decision {
+               text-align: center !important;
+            }
+
+            .htmlview .DSCR-Citation {
+               margin-top: 50px;
+            }
+
+            .htmlview {
+               padding: 0px 50px;
+            }
+
+            :target {
+               background: #ddd;
+               border: solid 4px #ddd;
+               transition: all .8s;
+            }
+
+            .htmlview a {
+               color: blue !important;
+            }
+         </style>
+         <!-- <script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/ajax_libs_jquery_3.7.1_jquery.min.js"></script> -->
+         <input type="hidden" name="year" id="year" value="2024">
+         <input type="hidden" name="volume" id="volume" value="1 ">
+         <input type="hidden" name="partno" id="partno" value="1">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12 col-md-12 col-12">
+                  <div class="button-goback">
+                                             <a href="javascript:void(0)" onclick="goback_filter()">Go Back</a>
+                     
+                                       </div>
+                  <div class="htmlview">
+                     <style>
+	p.Act_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Acts {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:24px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Advocatees-Appeared_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Advocates-Appeared {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Apeal {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:3px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Apeal-1 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:6px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Apeal-1_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Case-Cited {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:48px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Case-Cited_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Citation {
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:48px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+h1.Coram {
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.2;
+	margin-bottom:36px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Headnote {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:24px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Headnote_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Issues-for-Consideration {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:24px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Issues-for-Consideration_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Judgement {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:-48px;
+	text-transform:none;
+	widows:1;
+}
+p.Judgement_L1 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	list-style-position:outside;
+	list-style-type:decimal;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:-48px;
+	text-transform:none;
+	widows:1;
+}
+p.Judgment_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:36px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Keywords {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:24px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Keywords_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+h1.Party-Name {
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Result-of-the-Case {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:italic;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:24px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+span.Bold_underline {
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:underline;
+}
+span.Italic_words {
+	font-style:italic;
+	font-weight:normal;
+}
+span.bold_Word {
+	font-family:Helvetica, sans-serif;
+	font-style:normal;
+	font-weight:bold;
+}
+span._idGenBNMarker-1 {
+	display:inline-block;
+	text-indent:0;
+	width:48px;
+}
+p.ParaOverride-1 {
+	text-align:center;
+	text-indent:0px;
+}
+p.ParaOverride-2 {
+	text-indent:0px;
+}
+p.ParaOverride-3 {
+	margin-bottom:60px;
+}
+span.CharOverride-1 {
+	font-style:normal;
+	font-weight:normal;
+}
+</style>
+		<div id="_idContainer000" class="Basic-Text-Frame">
+			<p class="Citation"><a id="_idTextAnchor000"></a>[2024] 1 S.C.R. 1183 : <span class="Neutral-Citation">2024 INSC 105</span></p>
+			<h1 class="Party-Name">Axis Bank Limited v. Naren Seth &amp; Anr.</h1>
+			<p class="Apeal">(M.A. No. 190 of 2024)<br>In<br>(Civil Appeal No. 2085 of 2022)</p>
+			<p class="Apeal">19 January 2024</p>
+			<h1 class="Coram"><span class="bold_Word">[Vikram Nath and Satish Chandra Sharma, JJ.]</span></h1>
+			<p class="Issues-for-Consideration_Heading"><span class="bold_Word">Issue for Consideration</span></p>
+			<p class="Issues-for-Consideration">Application was filed by the applicant-appellant seeking clarification of the judgment reported in [2023] 14 SCR 581.</p>
+			<p class="Headnote_Heading"><span class="bold_Word">Headnotes</span></p>
+			<p class="Headnote"><span class="bold_Word">Insolvency and Bankruptcy Code, 2016 – Limitation Act, 1963 – Judgment reported in [2023] 14 SCR 581, corrected to an extent – Word “unsecured creditor” referred in para 20 of the judgment to be read as “secured creditor”.</span></p>
+			
+			
+			<p class="Case-Cited_Heading"><span class="bold_Word">Case Law Cited</span></p>
+			
+			<p class="Case-Cited"><span class="Italic_words">Axis Bank Ltd.  v. Naren Seth &amp; Anr.,</span> <span class="bold_Word">[2023] 14 SCR 581 – Corrected to an extent.</span></p>
+			
+			
+			<p class="Act_Heading"><span class="bold_Word">List of Acts</span></p>
+			<p class="Acts"><span class="bold_Word">Insolvency and Bankruptcy Code, 2016; Limitation Act, 1963</span></p>
+			<p class="Keywords_Heading"><span class="bold_Word">List of Keywords</span></p>
+			<p class="Keywords">Insolvency; Bankruptcy; Limitation; Clarification of judgment; Correction in judgment; Unsecured creditor; Secured creditor</p>
+			<p class="Apeal-1_Heading"><span class="bold_Word">Case Arising From</span></p>
+			<p class="Apeal-1">CIVIL APPELLATE JURISDICTION : Miscellaneous Application No.190 Of 2024</p>
+			<p class="Apeal-1">From the Judgment and Order dated 22.09.2021 of the National Company Law Appellate Tribunal, Principal Bench, New Delhi in Company Appeal (AT) (Insolvency) No.930 of 2021.</p>
+			<p class="Advocatees-Appeared_Heading"><span class="bold_Word">Appearances for Parties</span></p>
+			<p class="Advocates-Appeared">Sanjiv Sen, Sr. Adv., Ujjal Banerjee, Akash Khurana, Advs. for the Appellant.</p>
+			<p class="Advocates-Appeared">Ms. Neha Sharma, Surya Prakash, Ms. Megha Karnwal, Arjun Bhatia, Devesh Dubey, Ms. Mahima Kapur, Ms. Divya Singh Pundir, Vikas Mehta, Advs. for the Respondents.</p>
+			<span id="judgmentdiv">
+			<p class="Judgment_Heading"><span class="bold_Word">Judgment / Order of the Supreme Court</span></p>
+			<p class="Judgement ParaOverride-1"><span class="Bold_underline">Order</span></p>
+			<p class="Judgement ParaOverride-2">Delay condoned.</p>
+			<p class="Judgement_L1"><span class="_idGenBNMarker-1">2.</span>This application is filed by the applicant- appellant seeking clarification of the judgment dated 12.09.2023 passed in Civil Appeal No.2085 of 2022.</p>
+			<p class="Judgement_L1"><span class="_idGenBNMarker-1">3.</span>Heard learned counsel for the parties.</p>
+			<p class="Judgement_L1"><span class="_idGenBNMarker-1">4.</span>The word “unsecured creditor” referred to in paragraph 20  of the judgment be  now read  as “secured creditor”.</p>
+			<p class="Judgement_L1"><span class="_idGenBNMarker-1">5.</span>Judgment dated 12.09.2023 is corrected to the above extent only.</p>
+			<p class="Judgement_L1 ParaOverride-3"><span class="_idGenBNMarker-1">6.</span>Miscellaneous application is disposed of accordingly.</p>
+			</span>
+			<p class="Result-of-the-Case"><span class="Italic_words">Result of the case: </span><span class="Italic_words CharOverride-1">M.A. disposed of. </span></p>
+			<hr class="HorizontalRule-1">
+		</div>
+                     <button id="scroll" style="display: none;" title="Go to top">Top <i class="fa fa-angle-up"></i></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="model-pdf">
+
+            <div class="modal" tabindex="-1" id="exampleModal">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h5 class="modal-title">FILE VIEW</h5>
+                        <!-- <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>-->
+                     </div>
+                     <div class="modal-body">
+                        <iframe id="frame" width="100%" height="100%" frameborder="0" white="true" scrolling="true" allowtransparency="true"></iframe>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+
+
+<script>
+   $('a[href="#my_modal"]').on('click', function() {
+      var id = $(this).attr('data-id');
+      console.log(id);
+      // $('input[name="id"]').val(id);
+      $("#frame").attr("src", id);
+
+      $('#exampleModal').modal('show');
+   });
+</script>
+<script>
+   $('a[href*="#"]').each(function() {
+      //console.log('Contains #::'+ $(this).attr('href'));
+      var href = $(this).attr('href');
+      href = href.split('#')[1];
+      //console.log("href ::"+href);
+      $(this).attr('href', '#' + href);
+   });
+</script>
+<script>
+   function zfill(num, len) {
+      return (Array(len).join("0") + num).slice(-len);
+   }
+
+
+   $('._idFootnote').each(function(index) {
+      var numb1 = zfill(index, 3);
+      var class1 = "#footnote-" + numb1 + "-backlink";
+      //$(this).append("<span></span>");
+      console.log(class1);
+      console.log($(class1).css("background-color", "white"));
+      console.log($(class1).css("color", "blue"));
+      console.log($(class1).css("font-size", "12px"));
+      console.log($(class1).css("font-weight", "bold"));
+      console.log($(class1).css("text-decoration", "underline"));
+      console.log($(class1).css("vertical-align", "super"));
+      //$(this).attr("style", "background-color: green");
+   });
+
+
+
+   // document.addEventListener("contextmenu", function (e){
+   //  	e.preventDefault();
+   // }, false);
+
+
+   // $("._idFootnotes").before("<div>Judgment Reffered</div>");
+
+
+   function history_back() {
+      window.history.back();
+   }
+</script>
+
+<script>
+   $(document).ready(function() {
+
+      $(window).scroll(function() {
+         if ($(this).scrollTop() > 20) {
+            $('#scroll').fadeIn();
+         } else {
+            $('#scroll').fadeOut();
+         }
+      });
+      $('#scroll').click(function() {
+         $("html, body").animate({
+            scrollTop: "0"
+         });
+
+         return false;
+      });
+   });
+
+
+
+
+   function goback_filter() {
+      //window.location.href="filtersearch";
+      //window.location.href="new-filtersearch";
+
+      var year = $('#year').val();
+      var volume = $('#volume').val();
+      var partno = $('#partno').val();
+
+
+      jQuery.ajax({
+         url: "fetch_judgement_ajax",
+         type: "POST",
+         data: {
+            year: year,
+            volume: volume,
+            partno: partno,
+         },
+         success: function(data) {
+            $("#view-judgment").empty();
+            $("#view-judgment").hide();
+            $("#judgement-view").empty();
+            $("#judgement-view").html(data);
+
+            //window.location.href = "index?id=" + number;
+
+
+
+         },
+      });
+   }
+   window.setTimeout(function() {
+      $(window).scrollTop(0);
+   }, 0);
+</script>
+<div id="footer">
+
+
+
+   <div class="row">
+   
+   <div class="col-lg-3 col-md-3 col-3">
+         <div class="footer-inner">
+            <a href="aboutus">About DSCR</a>
+         </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-3">
+         <div class="footer-inner">
+            <a href="Editorialboard">Editorial Board</a>
+         </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-3">
+         <div class="footer-inner">
+            <a href="contact_us">Contact us</a>
+         </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-3">
+         <div class="footer-inner">
+            <a href="disclaimer">Disclaimer</a>
+         </div>
+      </div>
+     
+   </div>
+   
+   <div class="Copyright">
+      <p>©2024 Supreme Court of India. All Rights Reserved. </p>
+   </div>
+</div>
+
+
+<!-- new file data -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/customjs.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/autocomplete.js?v=1.2"></script>
+<script src="js/multi_select.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/datatables.min.js"></script>
+<script src="js/datatables.js"></script>
+
+<script>
+    function myFunction(value) {
+        this_dots = 'dots_'+value;
+        this_more = 'more_'+value;
+        this_myBtn = 'myBtn_'+value;
+        var dots = document.getElementById(this_dots);
+        var moreText = document.getElementById(this_more);
+        var btnText = document.getElementById(this_myBtn);
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+<script>
+    // *for top Scroll-- */
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 150) {
+            $('#top-scroll').fadeIn();
+        }
+        else {
+            $('#top-scroll').fadeOut();
+        }
+    });
+
+    $(document).ready(function () {
+        $('#top-scroll').click(function () {
+            $('html,body').animate({ scrollTop: $('.top-head').offset().top });
+        })
+
+    });
+
+    /*for top Scroll end--*/
+</script>
+<script>
+    $(function () {
+        $('#citation_type').change(function () {
+            // $('.org-details').hide();
+            $('.Search-By').css("display", "none");
+            citation_type = $(this).val();
+
+            if(citation_type!=''){
+                $('#' + citation_type).show();
+            }
+        });
+    });
+</script>
+
+<script>
+    (function($) {
+        $(".Coram-new").select2({
+            closeOnSelect : false,
+            placeholder : "Click to select Coram",
+            allowHtml: true,
+            allowClear: true,
+            tags: true
+        });
+    })(jQuery);
+</script>
+
+<script>
+    (function($) {
+        $(".givenby").select2({
+            closeOnSelect : false,
+            placeholder : "Click to select Judges",
+            allowHtml: true,
+            allowClear: true,
+            tags: true
+        });
+    })(jQuery);
+</script>
+
+
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+
+<!-- old file -->
+<script>
+var $affectedElements = $("span, div, p, h1, h2, h3, h4, h5, h6 , a , label , select"); // Can be extended, ex. $("div, p, span.someClass")
+
+// Storing the original size in a data attribute so size can be reset
+$affectedElements.each( function(){
+  var $this = $(this);
+  $this.data("orig-size", $this.css("font-size") );
+});
+
+$("#btn-increase").click(function(){
+  changeFontSize(1);
+})
+
+$("#btn-decrease").click(function(){
+  changeFontSize(-1);
+})
+
+$("#btn-orig").click(function(){
+  $affectedElements.each( function(){
+        var $this = $(this);
+        $this.css( "font-size" , $this.data("orig-size") );
+   });
+})
+
+function changeFontSize(direction){
+    $affectedElements.each( function(){
+        var $this = $(this);
+        $this.css( "font-size" , parseInt($this.css("font-size"))+direction );
+    });
+}
+   </script>
+
+<script>
+    $(document).ready(function(){
+        $(".Adv-search-m").click(function(){
+        if($(this).hasClass('toggle')){
+                $(".Adv-search-form-m").addClass("add-mob-Adv-search-form");            
+                $(this).removeClass('toggle');
+        } else{
+                $(".Adv-search-form-m").removeClass("add-mob-Adv-search-form");
+                $(this).addClass('toggle');
+        }                   
+        });
+
+    });
+</script>
+<!-- breking  script start -->
+<script src="js/jquery.marquee.js"></script>
+<script>
+    $(function() {  
+    var marquee = $('.marquee');
+    var ul = $('.marquee ul');
+    
+    var cloneContent = function() {
+
+        var doClone = true;
+        var clone_ul = function () {
+        ul.find('li').clone().appendTo( ul );
+        }
+        var check_ul_width = function() {
+        if(marquee.width() > ul.width() ) {
+            clone_ul();
+            return;
+        }
+        doClone = false;
+        ul.css('visibility', 'visible');
+        }
+
+        do {
+        check_ul_width();
+        var mw = marquee.width();
+        var uw = ul.width();
+        } while (doClone);
+
+    }
+
+    cloneContent();    
+    
+    $('.marquee').marquee({
+        duration: 40000,
+        duplicated: true
+    });
+    
+    });
+</script>
+</div>
+<div id="past_part-view"></div>
+<div id="data-splite" style="display: none;"></div>
+<div id="back-spilte" style="display: none;"></div>
+<div id="data-flip" style="display: none;"></div>
+<div id="data-pdf" style="display: none;"></div>
+<div id="emailSend_view"></div>
+<div id="view-judgment" style="scroll-behavior: auto; display: none;"></div>
+<div id="html_view" style="display: none;">
+
+
+   
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--<meta http-equiv="Content-Security-Policy" content="script-src 'none'">-->
+      <title>Digital Supreme Court Reports</title>
+      <link rel="icon" type="image/png" href="assets/images/favicon.png">
+      <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.new.css"> -->
+      
+      <link rel="stylesheet" href="assets/css/splitcss.css">
+      
+     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+     
+     <link rel="stylesheet" href="assets/css/search_Judgment.css">
+
+      <!-- <link rel="stylesheet" href="admin/assets/css/multiselect.css"> -->
+      <!-- <script src="assets/js/bootstrap.bundle.min.js"  ></script> -->
+
+      <!-- <script src="assets/js/ajax_libs_jquery_3.7.1_jquery.min.js"  ></script> -->
+
+
+
+      <!-- new file data  -->
+      <link rel="stylesheet" href="fontawesome/css/all.min.css">
+      <link href="css/bootstrap.min.css" rel="stylesheet">      
+      
+      <link href="css/commonstyle.css" rel="stylesheet">
+      <link href="css/custom.css" rel="stylesheet">
+      <link href="css/select2-min.css" rel="stylesheet">
+      <link href="css/select2.css" rel="stylesheet">
+      <link href="css/autocomplete.css" rel="stylesheet">
+      <link href="css/popup.css" rel="stylesheet">
+
+
+
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/responsive.css">
+   
+   
+      <header class="header">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-1 col-md-1 col-2">
+                  <div class="logo ashoka">
+
+                                   <a href="./"> <img src="assets/images/ashoka.png" alt="ashoka logo"></a>
+                  </div>
+               </div>
+               <div class="col-lg-8 col-md-8 col-8">
+                  <div class="header-content" tabindex="0">
+                     <span class="Supreme">Supreme Court of India </span>
+              
+                     <div class="Reports">
+                     <span>Digital Supreme Court Reports  </span></div>
+            
+                     <span class="Official">The Official Law Report</span>
+                     <span class="Official">Fortnightly</span>
+		     <span class="ISSN_NO">ISSN: 3048-4839 (Online)</span>
+                     
+                  </div>
+               </div>
+               <div class="col-lg-1 col-md-1 col-2">
+                  <div class="logo emblem">
+                  <a href="./">   <img src="assets/images/emblem.png" alt="emblem"></a>
+                  </div>
+               </div>
+            </div>
+        
+         </div>
+         <div class="home-position">
+         <div class="font-increase">
+         <span class="home"><a href="./"> Home</a></span>
+         <div id="chcp_font_size" class="input-group">
+       
+            <span class="input-group-btn">
+          
+            <button id="btn-decrease" class="btn btn-default" type="button" title="decrease Font Size" aria-label="decrease Font Size"><i class="fa fa-font" aria-hidden="true"></i>-</button>
+            <!-- <button id="btn-orig" class="btn btn-default" type="button"  title="Normal Font Size" aria-label="Normal Font Size"><i class="fa fa-font" aria-hidden="true"></i>A</button> -->
+            <button id="btn-increase" class="btn btn-default" type="button" title="increase Font Size" aria-label="increase Font Size"><i class="fa fa-font" aria-hidden="true"></i>+</button>
+            </span>
+         </div>
+      </div>
+      </div>
+      </header>
+      
+  
+      
+
+         <link rel="stylesheet" href="assets/css/responsive.css">
+
+         <style>
+            ._idFootnotes a {
+               color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+               text-decoration: underline;
+            }
+
+            .htmlview .Headnote p {
+               text-align: left !important;
+            }
+
+            .htmlview .Case-Cited p {
+               text-align: left !important;
+            }
+
+            .htmlview p.Apeal.ParaOverride-1 {
+               text-align: center !important;
+            }
+
+            .htmlview .Apeal-1 p {
+               text-align: left !important;
+            }
+
+            .htmlview .Apeal p {
+               text-align: left !important;
+            }
+
+            .htmlview .Advocates-Appeared p {
+               text-align: left !important;
+            }
+
+            .htmlview .Judgementp {
+               text-align: left !important;
+            }
+
+            .htmlview .Date-of-Decision {
+               text-align: center !important;
+            }
+
+            .htmlview .DSCR-Citation {
+               margin-top: 50px;
+            }
+
+            .htmlview {
+               padding: 0px 50px;
+            }
+
+            :target {
+               background: #ddd;
+               border: solid 4px #ddd;
+               transition: all .8s;
+            }
+
+            .htmlview a {
+               color: blue !important;
+            }
+         </style>
+         <!-- <script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/ajax_libs_jquery_3.7.1_jquery.min.js"></script> -->
+         <input type="hidden" name="year" id="year" value="2024">
+         <input type="hidden" name="volume" id="volume" value="1 ">
+         <input type="hidden" name="partno" id="partno" value="1">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12 col-md-12 col-12">
+                  <div class="button-goback">
+                                             <a href="javascript:void(0)" onclick="goback_filter()">Go Back</a>
+                     
+                                       </div>
+                  <div class="htmlview">
+                     <style>
+	p.Act_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Acts {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:24px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Advocatees-Appeared_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Advocates-Appeared {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Apeal {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:3px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Apeal-1 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:6px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Apeal-1_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Case-Cited {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:48px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Case-Cited_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Citation {
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:48px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+h1.Coram {
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.2;
+	margin-bottom:36px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Headnote {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:24px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Headnote_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Issues-for-Consideration {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:24px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Issues-for-Consideration_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Judgement {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:-48px;
+	text-transform:none;
+	widows:1;
+}
+p.Judgement_L1 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	list-style-position:outside;
+	list-style-type:decimal;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:-48px;
+	text-transform:none;
+	widows:1;
+}
+p.Judgment_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:36px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Keywords {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:48px;
+	margin-right:24px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Keywords_Heading {
+	-epub-hyphens:none;
+	background-color:#dcddde;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.5;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:24px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+h1.Party-Name {
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Result-of-the-Case {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:Helvetica, sans-serif;
+	font-size:18px;
+	font-style:italic;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	margin-bottom:24px;
+	margin-left:48px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+span.Bold_underline {
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:underline;
+}
+span.Italic_words {
+	font-style:italic;
+	font-weight:normal;
+}
+span.bold_Word {
+	font-family:Helvetica, sans-serif;
+	font-style:normal;
+	font-weight:bold;
+}
+span._idGenBNMarker-1 {
+	display:inline-block;
+	text-indent:0;
+	width:48px;
+}
+p.ParaOverride-1 {
+	text-align:center;
+	text-indent:0px;
+}
+p.ParaOverride-2 {
+	text-indent:0px;
+}
+p.ParaOverride-3 {
+	margin-bottom:60px;
+}
+span.CharOverride-1 {
+	font-style:normal;
+	font-weight:normal;
+}
+</style>
+		<div id="_idContainer000" class="Basic-Text-Frame">
+			<p class="Citation"><a id="_idTextAnchor000"></a>[2024] 1 S.C.R. 1183 : <span class="Neutral-Citation">2024 INSC 105</span></p>
+			<h1 class="Party-Name">Axis Bank Limited v. Naren Seth &amp; Anr.</h1>
+			<p class="Apeal">(M.A. No. 190 of 2024)<br>In<br>(Civil Appeal No. 2085 of 2022)</p>
+			<p class="Apeal">19 January 2024</p>
+			<h1 class="Coram"><span class="bold_Word">[Vikram Nath and Satish Chandra Sharma, JJ.]</span></h1>
+			<p class="Issues-for-Consideration_Heading"><span class="bold_Word">Issue for Consideration</span></p>
+			<p class="Issues-for-Consideration">Application was filed by the applicant-appellant seeking clarification of the judgment reported in [2023] 14 SCR 581.</p>
+			<p class="Headnote_Heading"><span class="bold_Word">Headnotes</span></p>
+			<p class="Headnote"><span class="bold_Word">Insolvency and Bankruptcy Code, 2016 – Limitation Act, 1963 – Judgment reported in [2023] 14 SCR 581, corrected to an extent – Word “unsecured creditor” referred in para 20 of the judgment to be read as “secured creditor”.</span></p>
+			
+			
+			<p class="Case-Cited_Heading"><span class="bold_Word">Case Law Cited</span></p>
+			
+			<p class="Case-Cited"><span class="Italic_words">Axis Bank Ltd.  v. Naren Seth &amp; Anr.,</span> <span class="bold_Word">[2023] 14 SCR 581 – Corrected to an extent.</span></p>
+			
+			
+			<p class="Act_Heading"><span class="bold_Word">List of Acts</span></p>
+			<p class="Acts"><span class="bold_Word">Insolvency and Bankruptcy Code, 2016; Limitation Act, 1963</span></p>
+			<p class="Keywords_Heading"><span class="bold_Word">List of Keywords</span></p>
+			<p class="Keywords">Insolvency; Bankruptcy; Limitation; Clarification of judgment; Correction in judgment; Unsecured creditor; Secured creditor</p>
+			<p class="Apeal-1_Heading"><span class="bold_Word">Case Arising From</span></p>
+			<p class="Apeal-1">CIVIL APPELLATE JURISDICTION : Miscellaneous Application No.190 Of 2024</p>
+			<p class="Apeal-1">From the Judgment and Order dated 22.09.2021 of the National Company Law Appellate Tribunal, Principal Bench, New Delhi in Company Appeal (AT) (Insolvency) No.930 of 2021.</p>
+			<p class="Advocatees-Appeared_Heading"><span class="bold_Word">Appearances for Parties</span></p>
+			<p class="Advocates-Appeared">Sanjiv Sen, Sr. Adv., Ujjal Banerjee, Akash Khurana, Advs. for the Appellant.</p>
+			<p class="Advocates-Appeared">Ms. Neha Sharma, Surya Prakash, Ms. Megha Karnwal, Arjun Bhatia, Devesh Dubey, Ms. Mahima Kapur, Ms. Divya Singh Pundir, Vikas Mehta, Advs. for the Respondents.</p>
+			<span id="judgmentdiv">
+			<p class="Judgment_Heading"><span class="bold_Word">Judgment / Order of the Supreme Court</span></p>
+			<p class="Judgement ParaOverride-1"><span class="Bold_underline">Order</span></p>
+			<p class="Judgement ParaOverride-2">Delay condoned.</p>
+			<p class="Judgement_L1"><span class="_idGenBNMarker-1">2.</span>This application is filed by the applicant- appellant seeking clarification of the judgment dated 12.09.2023 passed in Civil Appeal No.2085 of 2022.</p>
+			<p class="Judgement_L1"><span class="_idGenBNMarker-1">3.</span>Heard learned counsel for the parties.</p>
+			<p class="Judgement_L1"><span class="_idGenBNMarker-1">4.</span>The word “unsecured creditor” referred to in paragraph 20  of the judgment be  now read  as “secured creditor”.</p>
+			<p class="Judgement_L1"><span class="_idGenBNMarker-1">5.</span>Judgment dated 12.09.2023 is corrected to the above extent only.</p>
+			<p class="Judgement_L1 ParaOverride-3"><span class="_idGenBNMarker-1">6.</span>Miscellaneous application is disposed of accordingly.</p>
+			</span>
+			<p class="Result-of-the-Case"><span class="Italic_words">Result of the case: </span><span class="Italic_words CharOverride-1">M.A. disposed of. </span></p>
+			<hr class="HorizontalRule-1">
+		</div>
+                     <button id="scroll" style="display: none;" title="Go to top">Top <i class="fa fa-angle-up"></i></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="model-pdf">
+
+            <div class="modal" tabindex="-1" id="exampleModal">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h5 class="modal-title">FILE VIEW</h5>
+                        <!-- <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>-->
+                     </div>
+                     <div class="modal-body">
+                        <iframe id="frame" width="100%" height="100%" frameborder="0" white="true" scrolling="true" allowtransparency="true"></iframe>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+
+
+<script>
+   $('a[href="#my_modal"]').on('click', function() {
+      var id = $(this).attr('data-id');
+      console.log(id);
+      // $('input[name="id"]').val(id);
+      $("#frame").attr("src", id);
+
+      $('#exampleModal').modal('show');
+   });
+</script>
+<script>
+   $('a[href*="#"]').each(function() {
+      //console.log('Contains #::'+ $(this).attr('href'));
+      var href = $(this).attr('href');
+      href = href.split('#')[1];
+      //console.log("href ::"+href);
+      $(this).attr('href', '#' + href);
+   });
+</script>
+<script>
+   function zfill(num, len) {
+      return (Array(len).join("0") + num).slice(-len);
+   }
+
+
+   $('._idFootnote').each(function(index) {
+      var numb1 = zfill(index, 3);
+      var class1 = "#footnote-" + numb1 + "-backlink";
+      //$(this).append("<span></span>");
+      console.log(class1);
+      console.log($(class1).css("background-color", "white"));
+      console.log($(class1).css("color", "blue"));
+      console.log($(class1).css("font-size", "12px"));
+      console.log($(class1).css("font-weight", "bold"));
+      console.log($(class1).css("text-decoration", "underline"));
+      console.log($(class1).css("vertical-align", "super"));
+      //$(this).attr("style", "background-color: green");
+   });
+
+
+
+   // document.addEventListener("contextmenu", function (e){
+   //  	e.preventDefault();
+   // }, false);
+
+
+   // $("._idFootnotes").before("<div>Judgment Reffered</div>");
+
+
+   function history_back() {
+      window.history.back();
+   }
+</script>
+
+<script>
+   $(document).ready(function() {
+
+      $(window).scroll(function() {
+         if ($(this).scrollTop() > 20) {
+            $('#scroll').fadeIn();
+         } else {
+            $('#scroll').fadeOut();
+         }
+      });
+      $('#scroll').click(function() {
+         $("html, body").animate({
+            scrollTop: "0"
+         });
+
+         return false;
+      });
+   });
+
+
+
+
+   function goback_filter() {
+      //window.location.href="filtersearch";
+      //window.location.href="new-filtersearch";
+
+      var year = $('#year').val();
+      var volume = $('#volume').val();
+      var partno = $('#partno').val();
+
+
+      jQuery.ajax({
+         url: "fetch_judgement_ajax",
+         type: "POST",
+         data: {
+            year: year,
+            volume: volume,
+            partno: partno,
+         },
+         success: function(data) {
+            $("#view-judgment").empty();
+            $("#view-judgment").hide();
+            $("#judgement-view").empty();
+            $("#judgement-view").html(data);
+
+            //window.location.href = "index?id=" + number;
+
+
+
+         },
+      });
+   }
+   window.setTimeout(function() {
+      $(window).scrollTop(0);
+   }, 0);
+</script>
+<div id="footer">
+
+
+
+   <div class="row">
+   
+   <div class="col-lg-3 col-md-3 col-3">
+         <div class="footer-inner">
+            <a href="aboutus">About DSCR</a>
+         </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-3">
+         <div class="footer-inner">
+            <a href="Editorialboard">Editorial Board</a>
+         </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-3">
+         <div class="footer-inner">
+            <a href="contact_us">Contact us</a>
+         </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-3">
+         <div class="footer-inner">
+            <a href="disclaimer">Disclaimer</a>
+         </div>
+      </div>
+     
+   </div>
+   
+   <div class="Copyright">
+      <p>©2024 Supreme Court of India. All Rights Reserved. </p>
+   </div>
+</div>
+
+
+<!-- new file data -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/customjs.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/autocomplete.js?v=1.2"></script>
+<script src="js/multi_select.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/datatables.min.js"></script>
+<script src="js/datatables.js"></script>
+
+<script>
+    function myFunction(value) {
+        this_dots = 'dots_'+value;
+        this_more = 'more_'+value;
+        this_myBtn = 'myBtn_'+value;
+        var dots = document.getElementById(this_dots);
+        var moreText = document.getElementById(this_more);
+        var btnText = document.getElementById(this_myBtn);
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+<script>
+    // *for top Scroll-- */
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 150) {
+            $('#top-scroll').fadeIn();
+        }
+        else {
+            $('#top-scroll').fadeOut();
+        }
+    });
+
+    $(document).ready(function () {
+        $('#top-scroll').click(function () {
+            $('html,body').animate({ scrollTop: $('.top-head').offset().top });
+        })
+
+    });
+
+    /*for top Scroll end--*/
+</script>
+<script>
+    $(function () {
+        $('#citation_type').change(function () {
+            // $('.org-details').hide();
+            $('.Search-By').css("display", "none");
+            citation_type = $(this).val();
+
+            if(citation_type!=''){
+                $('#' + citation_type).show();
+            }
+        });
+    });
+</script>
+
+<script>
+    (function($) {
+        $(".Coram-new").select2({
+            closeOnSelect : false,
+            placeholder : "Click to select Coram",
+            allowHtml: true,
+            allowClear: true,
+            tags: true
+        });
+    })(jQuery);
+</script>
+
+<script>
+    (function($) {
+        $(".givenby").select2({
+            closeOnSelect : false,
+            placeholder : "Click to select Judges",
+            allowHtml: true,
+            allowClear: true,
+            tags: true
+        });
+    })(jQuery);
+</script>
+
+
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+
+<!-- old file -->
+<script>
+var $affectedElements = $("span, div, p, h1, h2, h3, h4, h5, h6 , a , label , select"); // Can be extended, ex. $("div, p, span.someClass")
+
+// Storing the original size in a data attribute so size can be reset
+$affectedElements.each( function(){
+  var $this = $(this);
+  $this.data("orig-size", $this.css("font-size") );
+});
+
+$("#btn-increase").click(function(){
+  changeFontSize(1);
+})
+
+$("#btn-decrease").click(function(){
+  changeFontSize(-1);
+})
+
+$("#btn-orig").click(function(){
+  $affectedElements.each( function(){
+        var $this = $(this);
+        $this.css( "font-size" , $this.data("orig-size") );
+   });
+})
+
+function changeFontSize(direction){
+    $affectedElements.each( function(){
+        var $this = $(this);
+        $this.css( "font-size" , parseInt($this.css("font-size"))+direction );
+    });
+}
+   </script>
+
+<script>
+    $(document).ready(function(){
+        $(".Adv-search-m").click(function(){
+        if($(this).hasClass('toggle')){
+                $(".Adv-search-form-m").addClass("add-mob-Adv-search-form");            
+                $(this).removeClass('toggle');
+        } else{
+                $(".Adv-search-form-m").removeClass("add-mob-Adv-search-form");
+                $(this).addClass('toggle');
+        }                   
+        });
+
+    });
+</script>
+<!-- breking  script start -->
+<script src="js/jquery.marquee.js"></script>
+<script>
+    $(function() {  
+    var marquee = $('.marquee');
+    var ul = $('.marquee ul');
+    
+    var cloneContent = function() {
+
+        var doClone = true;
+        var clone_ul = function () {
+        ul.find('li').clone().appendTo( ul );
+        }
+        var check_ul_width = function() {
+        if(marquee.width() > ul.width() ) {
+            clone_ul();
+            return;
+        }
+        doClone = false;
+        ul.css('visibility', 'visible');
+        }
+
+        do {
+        check_ul_width();
+        var mw = marquee.width();
+        var uw = ul.width();
+        } while (doClone);
+
+    }
+
+    cloneContent();    
+    
+    $('.marquee').marquee({
+        duration: 40000,
+        duplicated: true
+    });
+    
+    });
+</script>
+</div>
+
+<!-- <script src="assets/js/ajax_libs_jquery_3.7.1_jquery.min.js" nonce=""></script> -->
+<script src="js/jquery.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+   $(document).ready(function() {
+      $('ul li a').click(function() {
+         $('li a').removeClass("active");
+         $(this).addClass("active");
+      });
+   });
+</script>
+<script>
+   function goback() {
+   
+      var year = $('#year').val();
+      var volume = $('#volume').val();
+      var partno = $('#partno').val();
+      jQuery.ajax({
+         url: "fetch_judgement_ajax",
+         type: "POST",
+         data: {
+            year: year,
+            volume: volume,
+            partno: partno,
+         },
+         success: function(data) {
+          
+             $("#judgement-view").html(data);
+          
+   
+         },
+      });
+   }
+   
+   
+   
+   function flip_back() {
+   
+      var year = $('#year').val();
+      var volume = $('#volume').val();
+      var partno = $('#partno').val();
+      jQuery.ajax({
+         url: "fetch_judgement_ajax",
+         type: "POST",
+         data: {
+            year: year,
+            volume: volume,
+            partno: partno,
+         },
+         success: function(data) {
+            $('#data-flip').html(data);
+            $("#judgement-view").html(data);
+         },
+      });
+   }
+</script>
+<script src="assets/js/function2.js"></script></body></html>

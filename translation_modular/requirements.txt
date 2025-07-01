@@ -1,3 +1,6 @@
 ollama
 langdetect
 spacy
+beautifulsoup4
+docling
+

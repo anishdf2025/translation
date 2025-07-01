@@ -1,0 +1,9 @@
+Chunk-by-Chunk Translation Timing Information
+============================================================
+Source file: /home/anish/gemma3_ollama_tra_NER_QA/translation_modular/html/[2024] 1 S.C.R. 1183.html
+Number of chunks: 17
+
+Chunk #    Time (seconds) 
+-------------------------
+1          144.48
+2          257.59

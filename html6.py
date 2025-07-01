@@ -169,8 +169,8 @@ def extract_with_exact_structure(input_path, output_path):
     print(f"✅ Content extracted with exact structure and saved to: {output_path}")
 
 # Example usage
-input_html = "/home/anish/html/[2023] 4 S.C.R. 1144 1.html"
-output_txt = "all_extracted_output.md"
+input_html = "/home/anish/html/2024_Volume_Volume 11_Part_Part II_1732888536-converted.html"
+output_txt = "/home/anish/html/2024_Volume_Volume 11_Part_Part II_1732888536-converted.md"
 
 # Use the main function
 extract_all_visible_text(input_html, output_txt)

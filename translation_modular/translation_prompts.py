@@ -11,8 +11,8 @@ class TranslationPrompts:
         self.options = {
             "num_gpu": 0, 
             "num_ctx": 16000,
-            "num_predict": 2048, 
-            "temperature": 0.2,
+            "num_predict": 1024, 
+            "temperature": 0.1,
             "repeat_penalty": 1.2
         }
     

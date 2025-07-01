@@ -1,6 +1,7 @@
 import os
 import time
 from html_parser import HTMLParser
+from ocr_handler import OCRHandler
 
 
 class FileHandler:
@@ -8,9 +9,10 @@ class FileHandler:
     
     def __init__(self):
         self.html_parser = HTMLParser()
+        self.ocr_handler = OCRHandler()
     
     def read_file(self, file_path, keep_temp_html=True):
-        """Read content from a file - automatically process HTML files"""
+        """Read content from a file - automatically process HTML and OCR files"""
         try:
             # Check if it's an HTML file
             if self._is_html_file(file_path):
@@ -23,13 +25,32 @@ class FileHandler:
                     return content, None
                 else:
                     return None, "Failed to process HTML file"
+            # Check if it's an OCR file (PDF, PNG, JPG, JPEG)
+            elif self._is_ocr_file(file_path):
+                # Process OCR and return the path to the generated .md file
+                md_file_path = self._process_ocr_to_md_file(file_path)
+                if md_file_path:
+                    # Read the generated .md file
+                    with open(md_file_path, 'r', encoding='utf-8') as file:
+                        content = file.read()
+                    return content, None
+                else:
+                    return None, "Failed to process OCR file"
             else:
-                # For non-HTML files, read normally
+                # For non-HTML/non-OCR files, read normally
                 with open(file_path, 'r', encoding='utf-8') as file:
                     content = file.read()
                 return content, None
         except Exception as e:
             return None, str(e)
+    
+    def _is_ocr_file(self, file_path):
+        """Check if the file requires OCR processing"""
+        return self.ocr_handler.is_ocr_file(file_path)
+    
+    def _process_ocr_to_md_file(self, file_path):
+        """Process OCR file and create a permanent .md file"""
+        return self.ocr_handler.process_ocr_to_md_file(file_path)
     
     def _is_html_file(self, file_path):
         """Check if the file is an HTML file"""
@@ -106,13 +127,20 @@ class FileHandler:
         return os.path.getsize(file_path) / 1024
     
     def create_output_paths(self, file_path, target_lang):
-        """Create output file paths - handle HTML files by using their .md counterparts"""
+        """Create output file paths - handle HTML and OCR files by using their .md counterparts"""
         # If it's an HTML file, use the corresponding .md file for output naming
         if self._is_html_file(file_path):
             file_name = os.path.basename(file_path)
             file_base, _ = os.path.splitext(file_name)
             # Use .md extension for HTML-derived files
             actual_file_base = file_base
+            actual_file_ext = ".md"
+        # If it's an OCR file, use the corresponding .md file for output naming
+        elif self._is_ocr_file(file_path):
+            file_name = os.path.basename(file_path)
+            file_base, _ = os.path.splitext(file_name)
+            # Use .md extension for OCR-derived files
+            actual_file_base = f"{file_base}_ocr"
             actual_file_ext = ".md"
         else:
             file_name = os.path.basename(file_path)

@@ -23,7 +23,7 @@ class TextSplitter:
             print("   English splitting will use basic logic")
             self.nlp = None
     
-    def split_text_into_chunks(self, input_text, source_lang, target_tokens=1024):
+    def split_text_into_chunks(self, input_text, source_lang, target_tokens=512):
         """Split text into chunks of approximately target_tokens"""
         # Use spaCy-based splitting for English if available
         if source_lang == 'en' and self.nlp is not None:
